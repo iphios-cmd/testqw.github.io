@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Developer Certificates | iOS 18 Ready</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Анимированный фон -->
+        <div class="animated-background"></div>
+        
+        <!-- Заголовок с анимацией появления -->
+        <header class="fade-in">
+            <div class="logo-container">
+                <i class="fab fa-apple logo-icon"></i>
+                <h1 class="main-title">Developer<span class="gradient-text">Certificates</span></h1>
+            </div>
+            <p class="subtitle">Официальные сертификаты для публикации в App Store</p>
+            <div class="ios-badge">
+                <span class="ios-badge-text">iOS 18 & Xcode 16 Ready</span>
+            </div>
+        </header>
+
+        <!-- Основной контент -->
+        <main>
+            <!-- Преимущества -->
+            <section class="features slide-up">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>100% Официально</h3>
+                        <p>Сертификаты выпущены через Apple Developer Program</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Мгновенная активация</h3>
+                        <p>Доступ к сертификату сразу после оплаты</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Поддержка 24/7</h3>
+                        <p>Помощь с установкой и настройкой</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Карточки тарифов -->
+            <section class="pricing" id="pricing-cards">
+                <!-- Basic Card -->
+                <div class="pricing-card basic-card scale-in" style="animation-delay: 0.1s">
+                    <div class="card-header">
+                        <div class="plan-badge basic-badge">Basic</div>
+                        <h3 class="plan-name">Personal</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/год</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> 1 Сертификат разработчика</li>
+                            <li><i class="fas fa-check-circle"></i> Публикация в App Store</li>
+                            <li><i class="fas fa-check-circle"></i> До 10 приложений</li>
+                            <li><i class="fas fa-check-circle"></i> Техническая поддержка</li>
+                            <li class="disabled"><i class="fas fa-times-circle"></i> Групповой доступ</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="buy-btn basic-btn" onclick="handleBuy('basic')">
+                            <span class="btn-text">Выбрать план</span>
+                            <i class="fas fa-arrow-right btn-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pro Card (Рекомендуемый) -->
+                <div class="pricing-card pro-card scale-in" style="animation-delay: 0.2s">
+                    <div class="popular-badge">
+                        <i class="fas fa-crown"></i> ПОПУЛЯРНЫЙ ВЫБОР
+                    </div>
+                    <div class="card-header">
+                        <div class="plan-badge pro-badge">Pro</div>
+                        <h3 class="plan-name">Team</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">299</span>
+                            <span class="period">/год</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> 3 Сертификата разработчика</li>
+                            <li><i class="fas fa-check-circle"></i> Публикация в App Store</li>
+                            <li><i class="fas fa-check-circle"></i> До 50 приложений</li>
+                            <li><i class="fas fa-check-circle"></i> Приоритетная поддержка</li>
+                            <li><i class="fas fa-check-circle"></i> Групповой доступ (до 5 чел)</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="buy-btn pro-btn" onclick="handleBuy('pro')">
+                            <span class="btn-text">Выбрать план</span>
+                            <i class="fas fa-arrow-right btn-icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enterprise Card -->
+                <div class="pricing-card enterprise-card scale-in" style="animation-delay: 0.3s">
+                    <div class="card-header">
+                        <div class="plan-badge enterprise-badge">Enterprise</div>
+                        <h3 class="plan-name">Business</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">499</span>
+                            <span class="period">/год</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> 10 Сертификатов разработчика</li>
+                            <li><i class="fas fa-check-circle"></i> Публикация в App Store</li>
+                            <li><i class="fas fa-check-circle"></i> Неограниченное количество приложений</li>
+                            <li><i class="fas fa-check-circle"></i> Персональный менеджер</li>
+                            <li><i class="fas fa-check-circle"></i> Групповой доступ (до 20 чел)</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="buy-btn enterprise-btn" onclick="handleBuy('enterprise')">
+                            <span class="btn-text">Выбрать план</span>
+                            <i class="fas fa-arrow-right btn-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ секция -->
+            <section class="faq slide-up" style="animation-delay: 0.4s">
+                <h2 class="section-title">Частые вопросы</h2>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Как быстро я получу сертификат?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Сертификат активируется мгновенно после подтверждения оплаты. Вы получите все необходимые файлы и инструкции в течение 5-10 минут.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Это официальные сертификаты Apple?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, все сертификаты выпускаются через официальный Apple Developer Program и имеют полную легальность.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Можно ли использовать для коммерческих приложений?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Конечно! Все тарифы позволяют публиковать как бесплатные, так и платные приложения в App Store.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="fade-in" style="animation-delay: 0.5s">
+            <p class="copyright">© 2024 Apple Developer Certificates. Не является официальным продуктом Apple Inc.</p>
+            <p class="support">Поддержка: <a href="https://t.me/your_support" target="_blank">@your_support</a></p>
+        </footer>
+    </div>
+
+    <!-- Модальное окно подтверждения -->
+    <div class="modal-overlay" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-lock modal-icon"></i>
+                <h2>Подтверждение покупки</h2>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Вы будете перенаправлены на безопасную страницу оплаты. Нажмите "Продолжить" для перехода.</p>
+                <div class="plan-summary">
+                    <h3 id="selectedPlanName">Pro Plan</h3>
+                    <p id="selectedPlanPrice">$299/год</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" onclick="closeModal()">Отмена</button>
+                <button class="modal-btn confirm-btn" onclick="redirectToPayment()">Продолжить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
