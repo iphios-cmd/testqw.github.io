@@ -3,216 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Developer Certificates | iOS 18 Ready</title>
+    <title>Revenger iOS — Личные сертификаты Apple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- Анимированный фон -->
-        <div class="animated-background"></div>
-        
-        <!-- Заголовок с анимацией появления -->
-        <header class="fade-in">
-            <div class="logo-container">
-                <i class="fab fa-apple logo-icon"></i>
-                <h1 class="main-title">Developer<span class="gradient-text">Certificates</span></h1>
+    <!-- Background Effects -->
+    <div class="bg-grid" id="bgGrid"></div>
+    <div class="bg-glow"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-link active">Revenger iOS</a>
+            <a href="#features" class="nav-link">Возможности</a>
+            <a href="#pricing" class="nav-link">Цены</a>
+            <a href="#faq" class="nav-link">Вопросы</a>
+            <button class="nav-cta" onclick="window.open('https://t.me/+6AWkrKWiWt04YzUy', '_blank')">Telegram</button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="animate-text">
+                    Личные сертификаты<br>
+                    <span class="accent-text">Apple</span>
+                </h1>
+                <p class="hero-description animate-text-delay">
+                    Revenger iOS — сервис для создания и продажи личных сертификатов Apple. 
+                    P12, provisioning profiles, обходы и многое другое.
+                </p>
+                <a href="https://t.me/+6AWkrKWiWt04YzUy" class="hero-cta animate-text-delay-2" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                </svg>
+                    Telegram Канал
+                </a>
             </div>
-            <p class="subtitle">Официальные сертификаты для публикации в App Store</p>
-            <div class="ios-badge">
-                <span class="ios-badge-text">iOS 18 & Xcode 16 Ready</span>
-            </div>
-        </header>
-
-        <!-- Основной контент -->
-        <main>
-            <!-- Преимущества -->
-            <section class="features slide-up">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>100% Официально</h3>
-                        <p>Сертификаты выпущены через Apple Developer Program</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Мгновенная активация</h3>
-                        <p>Доступ к сертификату сразу после оплаты</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Поддержка 24/7</h3>
-                        <p>Помощь с установкой и настройкой</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Карточки тарифов -->
-            <section class="pricing" id="pricing-cards">
-                <!-- Basic Card -->
-                <div class="pricing-card basic-card scale-in" style="animation-delay: 0.1s">
-                    <div class="card-header">
-                        <div class="plan-badge basic-badge">Basic</div>
-                        <h3 class="plan-name">Personal</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">99</span>
-                            <span class="period">/год</span>
+            <div class="hero-visual">
+                <div class="device-container">
+                    <div class="device-glow"></div>
+                    <div class="device-frame">
+                        <div class="dynamic-island"></div>
+                        <div class="device-screen">
+                            <div class="status-bar">
+                                <span class="time">9:41</span>
+                                <div class="status-icons">
+                                    <svg class="signal" width="18" height="12" viewBox="0 0 18 12">
+                                        <path d="M1 8h2v4H1zM5 5h2v7H5zM9 2h2v10H9zM13 0h2v12h-2z" fill="currentColor"/>
+                                    </svg>
+                                    <div class="battery">
+                                        <div class="battery-level"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-content">
+                                <div class="cert-showcase">
+                                    <div class="cert-main">
+                                        <div class="cert-shield">
+                                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                                <path d="M9 12l2 2 4-4"/>
+                                            </svg>
+                                        </div>
+                                        <div class="cert-info">
+                                            <div class="cert-label">Сертификат:</div>
+                                            <div class="cert-status">Активен</div>
+                                        </div>
+                                    </div>
+                                    <div class="cert-details">
+                                        <div class="detail-item">
+                                            <span class="detail-label">Тип</span>
+                                            <span class="detail-value">P12 Developer</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Срок</span>
+                                            <span class="detail-value">365 дней</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="apps-list">
+                                    <div class="app-row">
+                                        <img src="img/minecrat.jpg" alt="Minecraft" class="app-img">
+                                        <div class="app-info">
+                                            <div class="app-name">Minecraft</div>
+                                            <div class="app-version">649,9 МБ</div>
+                                        </div>
+                                        <button class="install-btn">Установить</button>
+                                    </div>
+                                    
+                                    <div class="app-row">
+                                        <img src="img/tik tok.jpg" alt="Tik Tok" class="app-img">
+                                        <div class="app-info">
+                                            <div class="app-name">Tik Tok IOS26</div>
+                                            <div class="app-version">230,9 МБ</div>
+                                        </div>
+                                        <button class="install-btn">Установить</button>
+                                    </div>
+                                    
+                                    <div class="app-row">
+                                        <img src="img/rave.jpg" alt="Rave" class="app-img">
+                                        <div class="app-info">
+                                            <div class="app-name">Rave</div>
+                                            <div class="app-version">132,6 МБ</div>
+                                        </div>
+                                        <button class="install-btn">Установить</button>
+                                    </div>
+                                    
+                                    <div class="app-row">
+                                        <img src="img/ymusik.jpg" alt="Яндекс Музыка" class="app-img">
+                                        <div class="app-info">
+                                            <div class="app-name">Я.Музыка</div>
+                                            <div class="app-version">95,4 МБ</div>
+                                        </div>
+                                        <button class="install-btn">Установить</button>
+                                    </div>
+                                    <div class="app-row">
+                                        <img src="img/nulls.jpg" alt="Null`s Brawl" class="app-img">
+                                        <div class="app-info">
+                                            <div class="app-name">Null`s Brawl</div>
+                                            <div class="app-version">996,4 МБ</div>
+                                        </div>
+                                        <button class="install-btn">Установить</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check-circle"></i> 1 Сертификат разработчика</li>
-                            <li><i class="fas fa-check-circle"></i> Публикация в App Store</li>
-                            <li><i class="fas fa-check-circle"></i> До 10 приложений</li>
-                            <li><i class="fas fa-check-circle"></i> Техническая поддержка</li>
-                            <li class="disabled"><i class="fas fa-times-circle"></i> Групповой доступ</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <button class="buy-btn basic-btn" onclick="handleBuy('basic')">
-                            <span class="btn-text">Выбрать план</span>
-                            <i class="fas fa-arrow-right btn-icon"></i>
-                        </button>
-                    </div>
+                    <div class="device-reflection"></div>
                 </div>
-
-                <!-- Pro Card (Рекомендуемый) -->
-                <div class="pricing-card pro-card scale-in" style="animation-delay: 0.2s">
-                    <div class="popular-badge">
-                        <i class="fas fa-crown"></i> ПОПУЛЯРНЫЙ ВЫБОР
-                    </div>
-                    <div class="card-header">
-                        <div class="plan-badge pro-badge">Pro</div>
-                        <h3 class="plan-name">Team</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">299</span>
-                            <span class="period">/год</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check-circle"></i> 3 Сертификата разработчика</li>
-                            <li><i class="fas fa-check-circle"></i> Публикация в App Store</li>
-                            <li><i class="fas fa-check-circle"></i> До 50 приложений</li>
-                            <li><i class="fas fa-check-circle"></i> Приоритетная поддержка</li>
-                            <li><i class="fas fa-check-circle"></i> Групповой доступ (до 5 чел)</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <button class="buy-btn pro-btn" onclick="handleBuy('pro')">
-                            <span class="btn-text">Выбрать план</span>
-                            <i class="fas fa-arrow-right btn-icon"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Enterprise Card -->
-                <div class="pricing-card enterprise-card scale-in" style="animation-delay: 0.3s">
-                    <div class="card-header">
-                        <div class="plan-badge enterprise-badge">Enterprise</div>
-                        <h3 class="plan-name">Business</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">499</span>
-                            <span class="period">/год</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <ul class="plan-features">
-                            <li><i class="fas fa-check-circle"></i> 10 Сертификатов разработчика</li>
-                            <li><i class="fas fa-check-circle"></i> Публикация в App Store</li>
-                            <li><i class="fas fa-check-circle"></i> Неограниченное количество приложений</li>
-                            <li><i class="fas fa-check-circle"></i> Персональный менеджер</li>
-                            <li><i class="fas fa-check-circle"></i> Групповой доступ (до 20 чел)</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <button class="buy-btn enterprise-btn" onclick="handleBuy('enterprise')">
-                            <span class="btn-text">Выбрать план</span>
-                            <i class="fas fa-arrow-right btn-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQ секция -->
-            <section class="faq slide-up" style="animation-delay: 0.4s">
-                <h2 class="section-title">Частые вопросы</h2>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Как быстро я получу сертификат?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Сертификат активируется мгновенно после подтверждения оплаты. Вы получите все необходимые файлы и инструкции в течение 5-10 минут.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Это официальные сертификаты Apple?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Да, все сертификаты выпускаются через официальный Apple Developer Program и имеют полную легальность.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Можно ли использовать для коммерческих приложений?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Конечно! Все тарифы позволяют публиковать как бесплатные, так и платные приложения в App Store.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Футер -->
-        <footer class="fade-in" style="animation-delay: 0.5s">
-            <p class="copyright">© 2024 Apple Developer Certificates. Не является официальным продуктом Apple Inc.</p>
-            <p class="support">Поддержка: <a href="https://t.me/your_support" target="_blank">@your_support</a></p>
-        </footer>
-    </div>
-
-    <!-- Модальное окно подтверждения -->
-    <div class="modal-overlay" id="confirmationModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <i class="fas fa-lock modal-icon"></i>
-                <h2>Подтверждение покупки</h2>
-                <button class="modal-close" onclick="closeModal()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Вы будете перенаправлены на безопасную страницу оплаты. Нажмите "Продолжить" для перехода.</p>
-                <div class="plan-summary">
-                    <h3 id="selectedPlanName">Pro Plan</h3>
-                    <p id="selectedPlanPrice">$299/год</p>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="modal-btn cancel-btn" onclick="closeModal()">Отмена</button>
-                <button class="modal-btn confirm-btn" onclick="redirectToPayment()">Продолжить</button>
             </div>
         </div>
-    </div>
-
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Возможности</h2>
+            <p>всё что нужно для работы с сертификатами в одном месте</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📜</div>
+                <h3>P12 Сертификаты</h3>
+                <p>Личные сертификаты разработчика с привязкой к вашему UDID. Работают на всех устройствах iOS 15-18.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Provisioning Profiles</h3>
+                <p>Автоматическая генерация профилей под ваши устройства. Development и Distribution типы.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Обходы блокировок</h3>
+                <p>Актуальные методы защиты от отзыва сертификатов Apple. Приватные фиксы и обновления.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3>Поддержка 24/7</h3>
+                <p>Быстрая помощь в настройке и установке. Ответы на вопросы в течение 15 минут.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Проверка статуса</h3>
+                <p>Мгновенная проверка актуальности сертификата, срока действия и статуса отзыва.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Мгновенная выдача</h3>
+                <p>Получите сертификат сразу после оплаты. Автоматическая система работает круглосуточно.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Partners -->
+    <section class="partners">
+        <div class="partners-label">поддерживаем</div>
+        <div class="partners-logos">
+            <div class="partner-logo">📱 iPhone</div>
+            <div class="partner-logo">📱 iPad</div>
+            <div class="partner-logo">📱 iPod</div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="section-header">
+            <h2>Цены</h2>
+            <p>одна подписка — одно устройство</p>
+        </div>
+        <div class="pricing-row">
+            <div class="pricing-card">
+                <h3>Обычный</h3>
+                <div class="price">599<span>₽</span></div>
+                <div class="price-note">На 1 устройство</div>
+                <ul class="features-list">
+                    <li>1 устройство</li>
+                    <li>Готов через 24 - 80 часов</li>
+                    <li>Быстрая замена</li>
+                    <li>Гарантия 3 месяца</li>
+                    <li>Инструкция по использованию</li>
+                </ul>
+                <button class="pricing-cta" onclick="window.open('https://t.me/+6AWkrKWiWt04YzUy', '_blank')">Купить</button>
+            </div>
+            
+            <div class="pricing-card popular">
+                <div class="popular-badge">выгодный</div>
+                <h3>Быстрый</h3>
+                <div class="price">1199<span>₽</span></div>
+                <div class="price-note">На 1 устройство</div>
+                <ul class="features-list">
+                    <li>1 устройство</li>
+                    <li>Готов через 10 - 30 минут</li>
+                    <li>Быстрая замена</li>
+                    <li>Гарантия 6 месяцев</li>
+                    <li>Инструкция по использованию</li>
+                </ul>
+                <button class="pricing-cta" onclick="window.open('https://t.me/+6AWkrKWiWt04YzUy', '_blank')">Купить</button>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Парный Быстрый</h3>
+                <div class="price">1899<span>₽</span></div>
+                <div class="price-note">На 2 устройства</div>
+                <ul class="features-list">
+                    <li>На 2 устройства</li>
+                    <li>Готов через 10 - 30 минут</li>
+                    <li>Быстрая замена</li>
+                    <li>Гарантия 6 месяцев</li>
+                    <li>Инструкция по использованию</li>
+                </ul>
+                <button class="pricing-cta" onclick="window.open('https://t.me/+6AWkrKWiWt04YzUy', '_blank')">Купить</button>
+            </div>
+        </div>
+        <div class="pricing-note">
+            * При покупки от 2-ух сертификатов будет скидка. Например, как парный быстрый.
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <h2>Часто задаваемые вопросы</h2>
+            <p>ответы на самые популярные вопросы о сертификатах</p>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Что такое личный сертификат Apple?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Это цифровой сертификат разработчика (P12), который позволяет подписывать и устанавливать приложения на iOS-устройства без App Store. Он привязан к конкретному UDID устройства.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Как долго работает сертификат?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Срок действия сертификата составляет 1 год с момента создания. Однако Apple может отозвать сертификат раньше при нарушении правил. Мы предоставляем методы обхода отзывов.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Что нужно для покупки?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Для создания сертификата нам нужен UDID вашего устройства (можно найти в iTunes или через специальные приложения). Остальное мы сделаем сами.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Как установить сертификат?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Мы предоставляем подробную инструкцию и оказываем поддержку на каждом этапе. Обычно установка занимает 5-10 минут через AltStore, Sideloadly или другие инструменты.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Что если сертификат отзовут?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>При покупке тарифа "Про" и выше вы получаете доступ к приватным методам обхода отзывов. Также мы предоставляем скидку 50% на новый сертификат в случае массового отзыва.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Есть ли гарантия?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Да, мы гарантируем работоспособность сертификата в течение 7 дней с момента покупки. Если что-то не работает — вернём деньги или заменим сертификат.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-badge">🔥 Более 1000 продаж</div>
+            <h2>Готовы начать?</h2>
+            <p>Присоединяйтесь к тысячам пользователей, которые уже раскрыли потенциал своих iPhone</p>
+            <a href="https://t.me/+6AWkrKWiWt04YzUy" class="cta-button" target="_blank">
+                <span>Перейти в Telegram</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <div class="cta-features">
+                <span>✓ Мгновенная выдача</span>
+                <span>✓ Гарантия 7 дней</span>
+                <span>✓ Поддержка 24/7</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                Revenger iOS © 2025-2026
+            </div>
+            <a href="https://t.me/+6AWkrKWiWt04YzUy" class="footer-center" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+                </svg>
+                Telegram
+            </a>
+            <div class="footer-right">
+                Личные сертификаты Apple
+            </div>
+        </div>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
